@@ -1,10 +1,165 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Explorer - Aniket Singh</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* HERO */
+    .hero {
+      height: 100vh;
+
+      /* 👉 ADD YOUR SPACE BACKGROUND IMAGE HERE */
+      background: url('https://www.wallpaperflare.com/space-black-hole-interstellar-planet-wallpaper-rczr') center/cover no-repeat;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      text-shadow: 0 0 20px white;
+    }
+
+    .hero p {
+      margin-top: 15px;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .btn {
+      margin-top: 25px;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 25px;
+      background: cyan;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: white;
+      color: black;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .card {
+      width: 300px;
+      background: #111;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 15px 0;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: black;
+      opacity: 0.6;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Welcome to my portfolio 🚀</h1>
-  <p>This is my first GitHub Pages website.</p>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div>
+      <h1>Explore Space</h1>
+      <p>Journey through the universe</p>
+      <button class="btn" onclick="scrollDown()">Get Started</button>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="section" id="explore">
+    <h2>Discover</h2>
+
+    <div class="cards">
+
+      <!-- 🪐 PLANET -->
+      <div class="card">
+        <!-- 👉 ADD PLANET IMAGE -->
+        <img src="https://www.wallpaperflare.com/space-black-hole-interstellar-planet-wallpaper-rczr" alt="">
+        <h3>Planets</h3>
+        <p>Explore mysterious worlds.</p>
+      </div>
+
+      <!-- 🌌 GALAXY -->
+      <div class="card">
+        <!-- 👉 ADD GALAXY IMAGE -->
+        <img src="https://www.wallpaperflare.com/space-black-hole-interstellar-planet-wallpaper-rczr" alt="">
+        <h3>Galaxies</h3>
+        <p>Billions of stars await.</p>
+      </div>
+
+      <!-- 👨‍🚀 ASTRONAUT -->
+      <div class="card">
+        <!-- 👉 ADD ASTRONAUT IMAGE -->
+        <img src="https://www.wallpaperflare.com/space-black-hole-interstellar-planet-wallpaper-rczr" alt="">
+        <h3>Astronauts</h3>
+        <p>Meet space explorers.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Space Explorer</p>
+  </footer>
+
+  <script>
+    function scrollDown() {
+      document.getElementById("explore").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  </script>
+
 </body>
 </html>
